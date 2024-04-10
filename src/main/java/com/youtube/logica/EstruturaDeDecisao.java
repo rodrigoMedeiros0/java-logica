@@ -1,10 +1,15 @@
 package com.youtube.logica;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class EstruturaDeDecisao {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         numeroPar();
         stringIgual();
+        stringInicia();
     }
 
     private static void numeroPar() {
@@ -31,5 +36,14 @@ public class EstruturaDeDecisao {
         }
     }
 
+    private static void stringInicia() {
+        String palavra = "bobeira";
+
+        if (palavra.startsWith("a")) {
+            System.out.println("palavra iniciada com a");
+        } else {
+            System.out.println("palavra iniciada com outra letra");
+        }
+    }
 
 }
